@@ -88,6 +88,13 @@
                         background-color: #fff;
                         padding: 15px 15px 15px 0;
 
+                        @media screen and (max-width: 1024px) {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
+
                         .time-lesson {
                             color: #7d7c82;
                         }
@@ -112,6 +119,7 @@
                         .carousel-control-prev {
                             background-color: red;
                         }
+
                     }
                 }
             }
@@ -164,7 +172,7 @@
                     .rate-music {
                         align-items: center;
                         flex-wrap: wrap;
-
+                        text-align: center;
                         .rating-music {
                             color: #8f8aa7;
 
@@ -484,7 +492,7 @@
                 .rate-music {
                     align-items: center;
                     flex-wrap: wrap;
-
+                    text-align: center;
                     .rating-music {
                         color: #8f8aa7;
 

@@ -220,15 +220,15 @@
                                     <img :src="require(`~/assets/images/${item.image}.png`)" class="" alt="" />
                                 </div>
                                 <div class="rate-music row mx-0 py-2">
-                                    <div class="rating-music col-lg-4 pr-0">
+                                    <div class="rating-music col-lg-4 col-sm-4 pr-0">
                                         <b-icon icon="star" class="icon-rating"></b-icon>
                                         <span>{{ item.rating }}</span>
                                     </div>
-                                    <div class="view-music mx-0 col-lg-4 pr-0">
+                                    <div class="view-music mx-0 col-lg-4 col-sm-4 pr-0">
                                         <b-icon icon="eye" class="icon-rating"></b-icon>
                                         <span>{{ item.eye }}</span>
                                     </div>
-                                    <div class="listen-music mx-0 col-lg-4 pr-0">
+                                    <div class="listen-music mx-0 col-lg-4 col-sm-4 pr-0">
                                         <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                         <span>{{ item.listen }}</span>
                                     </div>
@@ -239,17 +239,17 @@
                                     <h4>{{ item.title }}</h4>
                                 </div>
                                 <div class="info-author row">
-                                    <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                    <div class="image-author col-lg-2 col-sm-2 pr-0">
                                         <img :src="require(`~/assets/images/${item.avatarAuthour}.png`)" class=""
                                             alt="" />
                                     </div>
-                                    <div class="name-author col-lg-4 col-sm-6 px-0">
+                                    <div class="name-author col-lg-4 col-sm-4 px-0">
                                         <span>{{ item.author }}</span>
                                     </div>
-                                    <div class="price-music col-lg-3 col-sm-6">
+                                    <div class="price-music col-lg-3 col-sm-3">
                                         <span>${{ item.promotionalPrice }}</span>
                                     </div>
-                                    <div class="promo-price col-lg-3 col-sm-6">
+                                    <div class="promo-price col-lg-3 col-sm-3">
                                         <span>${{ item.promotionalPrice }}</span>
                                     </div>
                                 </div>
@@ -416,7 +416,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="image-slogan col-lg-6">
+                        <div class="image-slogan col-lg-6 py-3">
                             <img src="@/assets/images/image_slogan.png">
                             <div class="icon-play">
                                 <img src="@/assets/images/icon_play.png">
@@ -471,16 +471,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -511,16 +511,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -551,16 +551,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -597,16 +597,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -637,16 +637,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -677,16 +677,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -723,16 +723,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -763,16 +763,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -803,16 +803,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -849,16 +849,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -889,16 +889,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -929,16 +929,16 @@
                                                 <h4>Everything You Need to Know About Business </h4>
                                             </div>
                                             <div class="info-author row">
-                                                <div class="image-author col-lg-2 col-sm-6 pr-0">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
                                                     <img src="~/assets/images/nhac2.png" class="" alt="" />
                                                 </div>
-                                                <div class="name-author col-lg-4 col-sm-6 px-0">
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
                                                     <span>Nicole Brown</span>
                                                 </div>
-                                                <div class="price-music col-lg-3 col-sm-6">
+                                                <div class="price-music col-lg-3 col-sm-3">
                                                     <span>$99.99</span>
                                                 </div>
-                                                <div class="promo-price col-lg-3 col-sm-6">
+                                                <div class="promo-price col-lg-3 col-sm-3">
                                                     <span>$49.99</span>
                                                 </div>
                                             </div>
@@ -961,7 +961,7 @@
                 </div>
                 <div class="body-favorite-course my-3">
                     <div class="list-course row mx-0">
-                        <div class="info-course-1 col-lg-3 w-100">
+                        <div class="info-course-1 my-3 col-lg-3 w-100">
                             <div class="background-course">
                                 <div class="d-grid py-3 px-2">
                                     <b-icon font-scale="3" icon="pen" class="border border-info rounded"
@@ -978,7 +978,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="info-course-2 col-lg-3 w-100">
+                        <div class="info-course-2  my-3 col-lg-3 w-100">
                             <div class="background-course">
                                 <div class="d-grid py-3 px-2">
                                     <b-icon font-scale="3" icon="tv" class="border border-info rounded"
@@ -995,7 +995,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="info-course-3 col-lg-3 w-100">
+                        <div class="info-course-3 my-3 col-lg-3 w-100">
                             <div class="background-course">
                                 <div class="d-grid py-3 px-2">
                                     <b-icon font-scale="3" icon="layout-text-sidebar" class="border border-info rounded"
@@ -1012,7 +1012,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="info-course-4 col-lg-3 w-100">
+                        <div class="info-course-4 my-3 col-lg-3 w-100">
                             <div class="background-course">
                                 <div class="d-grid py-3 px-2">
                                     <b-icon font-scale="3" icon="layout-text-sidebar" class="border border-info rounded"
@@ -1093,7 +1093,7 @@
                                             <div class="row h-100">
                                                 <div class="info-offer-education col-lg-6">
                                                     <div class="title-discount px-0">
-                                                        <span>Productvity Cource a</span>
+                                                        <span>Productvity Cource </span>
                                                     </div>
                                                     <div class="title-offer pt-3">
                                                         <span>The Complete Personal</span>
@@ -1180,7 +1180,7 @@
                                             <div class="row h-100">
                                                 <div class="info-offer-education col-lg-6">
                                                     <div class="title-discount px-0">
-                                                        <span>Productvity Cource a</span>
+                                                        <span>Productvity Cource </span>
                                                     </div>
                                                     <div class="title-offer pt-3">
                                                         <span>The Complete Personal</span>
@@ -1267,7 +1267,7 @@
                                             <div class="row h-100">
                                                 <div class="info-offer-education col-lg-6">
                                                     <div class="title-discount px-0">
-                                                        <span>Productvity Cource a</span>
+                                                        <span>Productvity Cource </span>
                                                     </div>
                                                     <div class="title-offer pt-3">
                                                         <span>The Complete Personal</span>
@@ -1354,7 +1354,7 @@
                                             <div class="row h-100">
                                                 <div class="info-offer-education col-lg-6">
                                                     <div class="title-discount px-0">
-                                                        <span>Productvity Cource a</span>
+                                                        <span>Productvity Cource </span>
                                                     </div>
                                                     <div class="title-offer pt-3">
                                                         <span>The Complete Personal</span>
