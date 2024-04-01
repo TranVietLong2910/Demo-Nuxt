@@ -747,7 +747,7 @@
             .job-education {
                 padding: 0 15px;
                 text-shadow: 0 0 black;
-                .offer-education {
+                .offer-education-1 {
                     background-color: #ffffff;
                     position: relative;
                     .background-offer-education {
@@ -765,15 +765,192 @@
                             color: #8f8aa7;
                         }
                         .title-offer {
-    
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                        .total-discount{
+                            background-color: #b3a092;
+                            border-radius: 10px;
+                            position: absolute;
+                            left: 0;
+                            top: 60%;
+                            padding: 5px;
+                            width: 70%;
+                            .text-discount{
+                                text-align: center;
+                                color: #ffffff;
+                            }
+                            .number-discount {
+                                color: #ffffff;
+                                font-size: 30px;
+                                text-align: center;
+                            }
                         }
                     }
+
                     .image-offer-education {
-                    z-index: 4;
+                        padding: 20px 10px 0 10px;
+                        z-index: 4;
                         img {
                             width: 100%;
+                            object-fit: fill;
+                            height: 100%;
                         }
                     }
+                }
+
+                .offer-education-2 {
+                    background-color: #ffffff;
+                    position: relative;
+                    .background-offer-education {
+                        height: 100%;
+                        width: 100%;
+                        background-color: #e3eef2;
+                        position: absolute;
+                        z-index: 2;
+                        clip-path: polygon(23% 62%, 76% 44%, 100% 59%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 54%);
+                    }
+                    .info-offer-education {
+                        padding: 20px 10px 20px 40px;
+                        z-index: 4;
+                        .title-discount {
+                            color: #8f8aa7;
+                        }
+                        .title-offer {
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                        .total-discount{
+                            background-color: #6492a0;
+                            border-radius: 10px;
+                            position: absolute;
+                            left: 0;
+                            top: 60%;
+                            padding: 5px;
+                            width: 70%;
+                            .text-discount{
+                                text-align: center;
+                                color: #ffffff;
+                            }
+                            .number-discount {
+                                color: #ffffff;
+                                font-size: 30px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .image-offer-education {
+                        padding: 20px 10px 0 10px;
+                        z-index: 4;
+                        img {
+                            width: 100%;
+                            object-fit: fill;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .offer-education-3 {
+                    background-color: #ffffff;
+                    position: relative;
+                    .background-offer-education {
+                        height: 100%;
+                        width: 100%;
+                        background-color: #f5ede5;
+                        position: absolute;
+                        z-index: 2;
+                        clip-path: polygon(23% 62%, 76% 44%, 100% 59%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 54%);
+                    }
+                    .info-offer-education {
+                        padding: 20px 10px 20px 40px;
+                        z-index: 4;
+                        .title-discount {
+                            color: #8f8aa7;
+                        }
+                        .title-offer {
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                        .total-discount{
+                            background-color: #df4260;
+                            border-radius: 10px;
+                            position: absolute;
+                            left: 0;
+                            top: 60%;
+                            padding: 5px;
+                            width: 70%;
+                            .text-discount{
+                                text-align: center;
+                                color: #ffffff;
+                            }
+                            .number-discount {
+                                color: #ffffff;
+                                font-size: 30px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .image-offer-education {
+                        padding: 20px 10px 0 10px;
+                        z-index: 4;
+                        img {
+                            width: 100%;
+                            object-fit: fill;
+                            height: 100%;
+                        }
+                    }
+                }
+
+            }
+            #carousel-3 {
+                padding-bottom: 40px;
+                position: relative;
+                align-items: space;
+            }
+
+            .carousel-control-prev {
+                height: 30px;
+                position: absolute;
+                top: 100%;
+
+                .carousel-control-prev-icon {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url("~/assets/images/icon_prev.png");
+                }
+
+                .carousel-control-prev-icon:hover {
+                    content: "<";
+                    font-size: 55px;
+                    color: orange;
+                }
+            }
+
+            .carousel-control-next {
+                height: 30px;
+                position: absolute;
+                top: 100%;
+
+                .carousel-control-next-icon {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url("~/assets/images/icon_next.png");
+                }
+            }
+
+            .carousel-indicators {
+                position: absolute;
+                top: 100%;
+
+                li {
+                    width: 100%;
+                    background-color: #ffa5000d;
+                }
+
+                .active {
+                    background-color: orange;
                 }
             }
         }

@@ -1043,7 +1043,7 @@
                     <b-button variant="outline-primary" class="view-lesson">Join Today</b-button>
                 </div>
             </div>
-            <!-- <div class="top-education">
+            <div class="top-education">
                 <div class="title-top-education px-0">
                     <div class="title">
                         <h2>Top Education offers and deals are listed here</h2>
@@ -1052,7 +1052,7 @@
                         <b-button variant="outline-danger" class="view-lesson">View all</b-button>
                     </div>
                 </div>
-                <div class="list-offer-educations">
+                <div class="list-offer-educations mt-5">
                     <b-carousel id="carousel-3" v-model="slide" :interval="4000" controls indicators
                         background="#efeff7" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px black;"
                         @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
@@ -1060,21 +1060,343 @@
                             <template #img>
                                 <div class="row">
                                     <div class="job-education col-lg-4">
-                                        <div class="offer-education">
+                                        <div class="offer-education-1 h-100 ml-3">
                                             <div class="background-offer-education">
-
                                             </div>
-                                            <div class="row">
+                                            <div class="row h-100">
                                                 <div class="info-offer-education col-lg-6">
                                                     <div class="title-discount px-0">
                                                         <span>Up To 58% Off</span>
                                                     </div>
                                                     <div class="title-offer pt-3">
-                                                        <h4>Get 12-Month Subscription</h4>
+                                                        <span>Get 12-Month Subscription</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            50%
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="image-offer-education col-lg-6">
                                                     <img src="@/assets/images/creator1.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-2 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Productvity Cource a</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>The Complete Personal</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Up To 58% Off
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            58%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator3.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-3 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Pass above Rs 250.</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Avail 10% off on Testbook</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            10%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator4.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="row">
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-1 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Up To 58% Off</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Get 12-Month Subscription</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            50%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator1.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-2 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Productvity Cource a</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>The Complete Personal</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Up To 58% Off
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            58%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator3.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-3 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Pass above Rs 250.</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Avail 10% off on Testbook</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            10%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator4.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="row">
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-1 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Up To 58% Off</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Get 12-Month Subscription</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            50%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator1.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-2 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Productvity Cource a</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>The Complete Personal</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Up To 58% Off
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            58%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator3.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-3 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Pass above Rs 250.</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Avail 10% off on Testbook</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            10%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator4.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="row">
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-1 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Up To 58% Off</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Get 12-Month Subscription</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            50%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator1.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-2 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Productvity Cource a</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>The Complete Personal</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Up To 58% Off
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            58%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator3.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-education col-lg-4">
+                                        <div class="offer-education-3 h-100 ml-3">
+                                            <div class="background-offer-education">
+                                            </div>
+                                            <div class="row h-100">
+                                                <div class="info-offer-education col-lg-6">
+                                                    <div class="title-discount px-0">
+                                                        <span>Pass above Rs 250.</span>
+                                                    </div>
+                                                    <div class="title-offer pt-3">
+                                                        <span>Avail 10% off on Testbook</span>
+                                                    </div>
+                                                    <div class="total-discount">
+                                                        <div class="text-discount">
+                                                            Total Discount
+                                                        </div>
+                                                        <div class="number-discount">
+                                                            10%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="image-offer-education col-lg-6">
+                                                    <img src="@/assets/images/creator4.png">
                                                 </div>
                                             </div>
                                         </div>
@@ -1084,7 +1406,7 @@
                         </b-carousel-slide>
                     </b-carousel>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="footer">
             <WebFooter />
