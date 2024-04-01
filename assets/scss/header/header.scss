@@ -1,0 +1,35 @@
+.header {
+    height: 100px;
+    background-color: #efeff7;
+    align-items: center;
+    display: flex;
+    .menu-web-pc {
+        width: 100%;
+        padding: 0 15%;
+        .navbar {
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            .navbar-nav {
+                font-size: 1.1rem;
+                grid-gap: 0 25px;
+                gap: 0 25px;
+                .icon-header {
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 0 25px;
+                    gap: 0 25px;
+                }
+            }
+            .info-account {
+                .avatar-user {
+                    width: 40px;
+                    border-radius: 50%;
+                }
+                
+            }
+        }
+
+    }
+    
+}

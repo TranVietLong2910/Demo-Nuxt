@@ -1,0 +1,24 @@
+.footer-web {
+    padding: 50px 15%;
+    background-color: #282834;
+    .body-footer {
+        border-bottom: 0.5px solid #8a8a90;
+        .title {
+            color: #ffffff;
+        }
+        .description {
+            color: #8d8d96;
+            line-height: 2.5;
+        }
+    }
+    
+    .footer {
+        color: #8d8d96;
+        .icon-footer {
+            svg {
+                font-size: 350% !important;
+            }
+        }
+    }
+
+}
