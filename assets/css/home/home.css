@@ -42,7 +42,7 @@
   }
 }
 .body .slide-banner .slide-lesson .list-lessons #carousel-1 {
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
   position: relative;
 }
 .body .slide-banner .slide-lesson .list-lessons .carousel-control-prev {
@@ -394,7 +394,7 @@
   }
 }
 .body .choice-course .list-lessons #carousel-2 {
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
   position: relative;
 }
 .body .choice-course .list-lessons .carousel-control-prev {
@@ -670,6 +670,19 @@
   align-items: center;
   justify-content: space-between !important;
 }
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .list-offer-pc {
+    display: none;
+  }
+}
+.body .top-education .list-offer-educations .list-offer-mobile {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .list-offer-mobile {
+    display: block;
+  }
+}
 .body .top-education .list-offer-educations .job-education {
   padding: 0 15px;
 }
@@ -714,6 +727,12 @@
   font-size: 30px;
   text-align: center;
 }
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .job-education .offer-education-1 .info-offer-education .total-discount {
+    width: 40%;
+    top: 80%;
+  }
+}
 .body .top-education .list-offer-educations .job-education .offer-education-1 .image-offer-education {
   padding: 20px 10px 0 10px;
   z-index: 4;
@@ -722,6 +741,12 @@
   width: 100%;
   object-fit: fill;
   height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .job-education .offer-education-1 .image-offer-education img {
+    height: 295px !important;
+    width: 337.72px !important;
+  }
 }
 .body .top-education .list-offer-educations .job-education .offer-education-2 {
   background-color: #ffffff;
@@ -764,6 +789,12 @@
   font-size: 30px;
   text-align: center;
 }
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .job-education .offer-education-2 .info-offer-education .total-discount {
+    width: 40%;
+    top: 80%;
+  }
+}
 .body .top-education .list-offer-educations .job-education .offer-education-2 .image-offer-education {
   padding: 20px 10px 0 10px;
   z-index: 4;
@@ -772,6 +803,12 @@
   width: 100%;
   object-fit: fill;
   height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .job-education .offer-education-2 .image-offer-education img {
+    height: 295px !important;
+    width: 337.72px !important;
+  }
 }
 .body .top-education .list-offer-educations .job-education .offer-education-3 {
   background-color: #ffffff;
@@ -814,6 +851,12 @@
   font-size: 30px;
   text-align: center;
 }
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .job-education .offer-education-3 .info-offer-education .total-discount {
+    width: 40%;
+    top: 80%;
+  }
+}
 .body .top-education .list-offer-educations .job-education .offer-education-3 .image-offer-education {
   padding: 20px 10px 0 10px;
   z-index: 4;
@@ -823,8 +866,14 @@
   object-fit: fill;
   height: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .body .top-education .list-offer-educations .job-education .offer-education-3 .image-offer-education img {
+    height: 295px !important;
+    width: 337.72px !important;
+  }
+}
 .body .top-education .list-offer-educations #carousel-3 {
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
   position: relative;
 }
 .body .top-education .list-offer-educations .carousel-control-prev {

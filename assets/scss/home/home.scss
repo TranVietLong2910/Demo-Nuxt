@@ -2,7 +2,7 @@ $color-background1:  #efeff7;
 $orange-ffa: #ffa500;
 
 @mixin carouselStyle{
-    padding-bottom: 20px;
+    padding-bottom: 1.5rem;
     position: relative;
 }
 
@@ -213,6 +213,10 @@ $orange-ffa: #ffa500;
         width: 100%;
         object-fit: fill;
         height: 100%;
+        @media screen and (max-width: 1024px) {
+            height: 295px !important;
+            width: 337.72px !important;
+        }
     }
 }
 
@@ -779,6 +783,20 @@ $orange-ffa: #ffa500;
         }
 
         .list-offer-educations {
+
+            .list-offer-pc {
+                @media screen and (max-width: 1024px) {
+                    display: none;
+                }
+            }
+
+            .list-offer-mobile {
+                display: none;
+                @media screen and (max-width: 1024px) {
+                    display: block;
+                }
+            }
+
             .job-education {
                 padding: 0 15px;
                 .offer-education-1 {
@@ -792,6 +810,10 @@ $orange-ffa: #ffa500;
                         .total-discount{
                             background-color: #b3a092;
                             @include totalDiscountEducation;
+                            @media screen and (max-width: 1024px) {
+                                width: 40%;
+                                top: 80%;
+                            }
                         }
                     }
 
@@ -811,11 +833,16 @@ $orange-ffa: #ffa500;
                         .total-discount{
                             background-color: #6492a0;
                             @include totalDiscountEducation;
+                            @media screen and (max-width: 1024px) {
+                                width: 40%;
+                                top: 80%;
+                            }
                         }
                     }
 
                     .image-offer-education {
                         @include imageOfferEducation;
+                        
                     }
                 }
 
@@ -830,6 +857,10 @@ $orange-ffa: #ffa500;
                         .total-discount{
                             background-color: #df4260;
                             @include totalDiscountEducation;
+                            @media screen and (max-width: 1024px) {
+                                width: 40%;
+                                top: 80%;
+                            }
                         }
                     }
 
@@ -839,6 +870,7 @@ $orange-ffa: #ffa500;
                 }
 
             }
+
             #carousel-3 {
                 @include carouselStyle;
             }
