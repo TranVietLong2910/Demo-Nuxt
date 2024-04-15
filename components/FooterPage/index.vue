@@ -1,7 +1,7 @@
 <template>
   <div class="footer-web">
     <div class="body-footer row py-3">
-      <div class="col-lg-3 d-grid"> 
+      <div class="col-lg-3 col-sm-6"> 
           <h3 class="title">Company</h3>
           <div class="description d-flex flex-column">
             <span>About</span>
@@ -11,7 +11,7 @@
             <span>Affiliates</span>
           </div>
       </div>
-      <div class="col-lg-3 d-grid"> 
+      <div class="col-lg-3 col-sm-6"> 
           <h3 class="title">Community</h3>
           <div class="description d-flex flex-column">
             <span>Go Premium</span>
@@ -22,7 +22,7 @@
             <span>Free Classes</span>
           </div>
       </div>
-      <div class="col-lg-3 d-grid"> 
+      <div class="col-lg-3 col-sm-6"> 
           <h3 class="title">Company</h3>
           <div class="description d-flex flex-column">
             <span>Become a</span>
@@ -33,7 +33,7 @@
             <span>Hand Book</span>
           </div>
       </div>
-      <div class="col-lg-3 d-grid"> 
+      <div class="col-lg-3 col-sm-6"> 
           <h3 class="title">Support</h3>
           <div class="description d-flex flex-column">
             <span>Support</span>

@@ -1,74 +1,280 @@
+$color-background1:  #efeff7;
+$orange-ffa: #ffa500;
+
+@mixin carouselStyle{
+    padding-bottom: 20px;
+    position: relative;
+}
+
+@mixin carouselControlPrev {
+    height: 30px;
+    position: absolute;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+
+        .carousel-control-prev-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23a59d90' viewBox='0 0 448 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z'/></svg>") !important;
+        }
+
+    &:hover {
+        .carousel-control-prev-icon {
+            filter: invert(0.5) sepia(1) hue-rotate(0) saturate(4) brightness(1);
+        }
+    }
+}
+
+@mixin carouselControlNext {
+    height: 30px;
+    position: absolute;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+
+        .carousel-control-next-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23a59d90' viewBox='0 0 448 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/></svg>") !important;
+           
+        }
+
+    &:hover {
+        .carousel-control-next-icon {
+            filter: invert(0.5) sepia(1) hue-rotate(0) saturate(4) brightness(1);
+        }
+    }
+}
+
+@mixin carouselIndicators {
+    .carousel-indicators {
+        position: absolute;
+        top: 100%;
+
+        li {
+            width: 100%;
+            background-color: #ffa5000d;
+        }
+
+        .active {
+            background-color: $orange-ffa;
+        }
+    }
+}
+
+@mixin customInfoMusic {
+    .info-music {
+        border-radius: 10px;
+        filter: drop-shadow(0px 8px 24px rgba(100, 100, 111, 0.2));
+
+        .header-info {
+            background-color: #fff;
+            border-bottom: 0.5px solid #7e7d7d;
+            padding: 4% 0%;
+
+            .music-image {
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: contain;
+                }
+            }
+
+            .rate-music {
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: center;
+
+                @media screen and (max-width: 1024px) {
+                    flex-wrap: nowrap;
+                }
+
+                .rating-music {
+                    color: #8f8aa7;
+
+                    .icon-rating {
+                        color: #f4b74a;
+                    }
+                }
+
+                .view-music {
+                    color: #8f8aa7;
+
+                    .icon-rating {
+                        color: #dd5214;
+                    }
+                }
+
+                .listen-music {
+                    color: #8f8aa7;
+                    white-space: break-spaces;
+
+                    .icon-rating {
+                        color: #529f75;
+                    }
+                }
+            }
+        }
+
+        .author-music {
+            padding: 4%;
+            background-color: #fff;
+
+            .info-author {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                    
+
+                .image-author {
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .name-author {
+                    color: #8f8aa7;
+                }
+
+                .price-music {
+                    color: #8f8aa7;
+                    text-decoration: line-through;
+                }
+
+                .promo-price {
+                    color: #f58c1e;
+                }
+            }
+        }
+    }
+}
+
+@mixin backgroundImageCreator {
+    height: 200px;
+    width: 100%;
+    z-index: 2;
+    top: -40px;
+    position: absolute;
+}
+
+@mixin offerEducation {
+    background-color: #ffffff;
+    position: relative;
+}
+
+@mixin backgroundOfferEducation {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    clip-path: polygon(23% 62%, 76% 44%, 100% 59%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 54%);
+}
+
+@mixin infoOfferEducation {
+    padding: 20px 10px 20px 40px;
+    z-index: 4;
+    .title-discount {
+        color: #8f8aa7;
+    }
+    .title-offer {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+@mixin totalDiscountEducation {
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    padding: 5px;
+    width: 70%;
+    .text-discount{
+        text-align: center;
+        color: #ffffff;
+    }
+    .number-discount {
+        color: #ffffff;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@mixin imageOfferEducation {
+    padding: 20px 10px 0 10px;
+    z-index: 4;
+    img {
+        width: 100%;
+        object-fit: fill;
+        height: 100%;
+    }
+}
+
 .body {
-    background-color: #efeff7;
+    background-color: $color-background1;
 
     .slide-banner {
         padding: 50px 15%;
 
+        @media screen and (max-width: 1024px) {
+            padding: 1.5rem 1rem;
+        }
+
         .view-lesson {
-            color: orange;
-            border-color: orange;
+            color: $orange-ffa;
+            border-color: $orange-ffa;
         }
 
         .view-lesson:hover {
-            background-color: orange;
-            color: #efeff7;
+            background-color: $orange-ffa;
+            color: $color-background1;
         }
 
         .slide-lesson {
             padding: 8px 16px;
 
+            @media screen and (max-width: 1024px) {
+                padding: unset;
+            }
+
             .list-lessons {
                 max-width: 100%;
 
-                #carousel-1 {
-                    padding-bottom: 20px;
-                    position: relative;
-                    align-items: space;
+                .view-lesson-pc {
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
                 }
 
+                .view-lesson-mobile {
+                    display: none;
+                    @media screen and (max-width: 1024px) {
+                        display: block;
+                    }
+                }
+
+                #carousel-1 {
+                   @include carouselStyle;
+                }
+
+               
                 .carousel-control-prev {
-                    height: 30px;
-                    position: absolute;
-                    top: 100%;
-
-                    .carousel-control-prev-icon {
-                        width: 40px;
-                        height: 40px;
-                        background-image: url("~/assets/images/icon_prev.png");
-                    }
-
-                    .carousel-control-prev-icon:hover {
-                        content: "<";
-                        font-size: 55px;
-                        color: orange;
-                    }
+                    @include carouselControlPrev;
+                    top: 94%;
                 }
 
                 .carousel-control-next {
-                    height: 30px;
-                    position: absolute;
-                    top: 100%;
-
-                    .carousel-control-next-icon {
-                        width: 40px;
-                        height: 40px;
-                        background-image: url("~/assets/images/icon_next.png");
-                    }
+                    @include carouselControlNext;
+                    top: 94%;
                 }
 
-                .carousel-indicators {
-                    position: absolute;
-                    top: 100%;
-
-                    li {
-                        width: 100%;
-                        background-color: #ffa5000d;
-                    }
-
-                    .active {
-                        background-color: orange;
-                    }
-                }
+                @include carouselIndicators;
 
                 .lesson {
                     min-width: 50%;
@@ -116,10 +322,6 @@
                             }
                         }
 
-                        .carousel-control-prev {
-                            background-color: red;
-                        }
-
                     }
                 }
             }
@@ -129,6 +331,10 @@
     .recommended {
         background-color: #fff;
         padding: 50px 15%;
+
+        @media screen and (max-width: 1024px) {
+            padding: 1.5rem 1rem;
+        }
 
         .recommended-content {
             padding: 0 16px;
@@ -152,91 +358,16 @@
         }
 
         .list-music {
-            .info-music {
-                border-radius: 10px;
-                filter: drop-shadow(0px 8px 24px rgba(100, 100, 111, 0.2));
-
-                .header-info {
-                    background-color: #fff;
-                    border-bottom: 0.5px solid #7e7d7d;
-                    padding: 4% 0%;
-
-                    .music-image {
-                        img {
-                            width: 100%;
-                            height: 200px;
-                            object-fit: contain;
-                        }
-                    }
-
-                    .rate-music {
-                        align-items: center;
-                        flex-wrap: wrap;
-                        text-align: center;
-                        .rating-music {
-                            color: #8f8aa7;
-
-                            .icon-rating {
-                                color: #f4b74a;
-                            }
-                        }
-
-                        .view-music {
-                            color: #8f8aa7;
-
-                            .icon-rating {
-                                color: #dd5214;
-                            }
-                        }
-
-                        .listen-music {
-                            color: #8f8aa7;
-                            white-space: break-spaces;
-
-                            .icon-rating {
-                                color: #529f75;
-                            }
-                        }
-                    }
-                }
-
-                .author-music {
-                    padding: 4%;
-                    background-color: #fff;
-
-                    .info-author {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        .image-author {
-                            img {
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
-                            }
-                        }
-
-                        .name-author {
-                            color: #8f8aa7;
-                        }
-
-                        .price-music {
-                            color: #8f8aa7;
-                            text-decoration: line-through;
-                        }
-
-                        .promo-price {
-                            color: #f58c1e;
-                        }
-                    }
-                }
-            }
+            @include customInfoMusic;
         }
     }
 
     .list-creators {
         padding: 50px 15%;
+
+        @media screen and (max-width: 1024px) {
+            padding: 1.5rem 1rem;
+        }
 
         .header-list-creators {
             padding: 0 16px;
@@ -275,57 +406,33 @@
                     position: relative;
 
                     .background-image-one {
-                        height: 200px;
-                        width: 100%;
+                        @include backgroundImageCreator;
                         background-color: #08ac7a;
-                        z-index: 2;
-                        top: -40px;
-                        position: absolute;
                     }
 
                     .background-image-two {
-                        height: 200px;
-                        width: 100%;
+                        @include backgroundImageCreator;
                         background-color: #575278;
-                        z-index: 2;
-                        top: -40px;
-                        position: absolute;
                     }
 
                     .background-image-three {
-                        height: 200px;
-                        width: 100%;
+                        @include backgroundImageCreator;
                         background-color: #f28921;
-                        z-index: 2;
-                        top: -40px;
-                        position: absolute;
                     }
 
                     .background-image-four {
-                        height: 200px;
-                        width: 100%;
+                        @include backgroundImageCreator;
                         background-color: #fdbd65;
-                        z-index: 2;
-                        top: -40px;
-                        position: absolute;
                     }
 
                     .background-image-five {
-                        height: 200px;
-                        width: 100%;
+                        @include backgroundImageCreator;
                         background-color: #ed6660;
-                        z-index: 2;
-                        top: -40px;
-                        position: absolute;
                     }
 
                     .background-image-six {
-                        height: 200px;
-                        width: 100%;
+                        @include backgroundImageCreator;
                         background-color: #8f9099;
-                        z-index: 2;
-                        top: -40px;
-                        position: absolute;
                     }
 
                     .ava-creator {
@@ -335,10 +442,12 @@
                         img {
                             width: 240px;
                             height: 280px;
-                            object-fit: fill;
+                            object-fit: contain;
                             position: absolute;
+                            object-position: bottom;
                             top: -120px;
                             z-index: 3;
+                            transition: all .3s ease;
                             filter: drop-shadow(0px 8px 24px rgb(54, 50, 50));
                         }
                     }
@@ -350,6 +459,10 @@
                     }
                 }
             }
+        }
+
+        .body-list-creators:hover {
+            transform: scale(1.1);
         }
 
         .slogan {
@@ -396,6 +509,10 @@
     .choice-course {
         padding: 50px 15%;
 
+        @media screen and (max-width: 1024px) {
+            padding: 1.5rem 1rem;
+        }
+
         .title-choice-course {
             padding: 0 16px;
             display: flex;
@@ -420,138 +537,48 @@
         }
 
         .list-lessons {
-            #carousel-2 {
-                padding-bottom: 40px;
-                position: relative;
-                align-items: space;
+
+            .list-lesson-view-pc {
+                @media screen and (max-width: 1024px) {
+                    display: none;
+                }
             }
 
-            .carousel-control-prev {
-                height: 30px;
-                position: absolute;
-                top: 100%;
-
-                .carousel-control-prev-icon {
-                    width: 40px;
-                    height: 40px;
-                    background-image: url("~/assets/images/icon_prev.png");
+            .list-lesson-view-mobile {
+                display: none;
+                @media screen and (max-width: 1024px) {
+                    display: block;
                 }
+            }
 
-                .carousel-control-prev-icon:hover {
-                    content: "<";
-                    font-size: 55px;
-                    color: orange;
+
+            #carousel-2 {
+                @include carouselStyle;
+            }
+
+          
+            .carousel-control-prev {
+                @include carouselControlPrev;
+                top: 97%;
+                @media screen and (max-width: 1024px) {
+                    top: 99%;
                 }
             }
 
             .carousel-control-next {
-                height: 30px;
-                position: absolute;
-                top: 100%;
-
-                .carousel-control-next-icon {
-                    width: 40px;
-                    height: 40px;
-                    background-image: url("~/assets/images/icon_next.png");
+                @include carouselControlNext;
+                top: 97%;
+                @media screen and (max-width: 1024px) {
+                    top: 99%;
                 }
             }
 
-            .carousel-indicators {
-                position: absolute;
-                top: 100%;
+            @include carouselIndicators;
 
-                li {
-                    width: 100%;
-                    background-color: #ffa5000d;
-                }
-
-                .active {
-                    background-color: orange;
-                }
-            }
         }
+        
 
-        .info-music {
-            border-radius: 10px;
-            filter: drop-shadow(0px 8px 24px rgba(100, 100, 111, 0.2));
-            text-shadow: 0 0 black;
-
-            .header-info {
-                background-color: #fff;
-                border-bottom: 0.5px solid #7e7d7d;
-                padding: 4% 0%;
-
-                .music-image {
-                    img {
-                        width: 100%;
-                        height: 200px;
-                        object-fit: contain;
-                    }
-                }
-
-                .rate-music {
-                    align-items: center;
-                    flex-wrap: wrap;
-                    text-align: center;
-                    .rating-music {
-                        color: #8f8aa7;
-
-                        .icon-rating {
-                            color: #f4b74a;
-                        }
-                    }
-
-                    .view-music {
-                        color: #8f8aa7;
-
-                        .icon-rating {
-                            color: #dd5214;
-                        }
-                    }
-
-                    .listen-music {
-                        color: #8f8aa7;
-                        white-space: break-spaces;
-
-                        .icon-rating {
-                            color: #529f75;
-                        }
-                    }
-                }
-            }
-
-            .author-music {
-                padding: 4%;
-                background-color: #fff;
-
-                .info-author {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    .image-author {
-                        img {
-                            width: 30px;
-                            height: 30px;
-                            border-radius: 50%;
-                        }
-                    }
-
-                    .name-author {
-                        color: #8f8aa7;
-                    }
-
-                    .price-music {
-                        color: #8f8aa7;
-                        text-decoration: line-through;
-                    }
-
-                    .promo-price {
-                        color: #f58c1e;
-                    }
-                }
-            }
-        }
+        @include customInfoMusic;
     }
 
     .favorite-course {
@@ -754,213 +781,79 @@
         .list-offer-educations {
             .job-education {
                 padding: 0 15px;
-                text-shadow: 0 0 black;
                 .offer-education-1 {
-                    background-color: #ffffff;
-                    position: relative;
+                    @include offerEducation;
                     .background-offer-education {
-                        height: 100%;
-                        width: 100%;
+                        @include backgroundOfferEducation;
                         background-color: #f5ece6;
-                        position: absolute;
-                        z-index: 2;
-                        clip-path: polygon(23% 62%, 76% 44%, 100% 59%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 54%);
                     }
                     .info-offer-education {
-                        padding: 20px 10px 20px 40px;
-                        z-index: 4;
-                        .title-discount {
-                            color: #8f8aa7;
-                        }
-                        .title-offer {
-                            font-size: 20px;
-                            font-weight: 700;
-                        }
+                        @include infoOfferEducation;
                         .total-discount{
                             background-color: #b3a092;
-                            border-radius: 10px;
-                            position: absolute;
-                            left: 0;
-                            top: 60%;
-                            padding: 5px;
-                            width: 70%;
-                            .text-discount{
-                                text-align: center;
-                                color: #ffffff;
-                            }
-                            .number-discount {
-                                color: #ffffff;
-                                font-size: 30px;
-                                text-align: center;
-                            }
+                            @include totalDiscountEducation;
                         }
                     }
 
                     .image-offer-education {
-                        padding: 20px 10px 0 10px;
-                        z-index: 4;
-                        img {
-                            width: 100%;
-                            object-fit: fill;
-                            height: 100%;
-                        }
+                        @include imageOfferEducation;
                     }
                 }
 
                 .offer-education-2 {
-                    background-color: #ffffff;
-                    position: relative;
+                    @include offerEducation;
                     .background-offer-education {
-                        height: 100%;
-                        width: 100%;
+                        @include backgroundOfferEducation;
                         background-color: #e3eef2;
-                        position: absolute;
-                        z-index: 2;
-                        clip-path: polygon(23% 62%, 76% 44%, 100% 59%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 54%);
                     }
                     .info-offer-education {
-                        padding: 20px 10px 20px 40px;
-                        z-index: 4;
-                        .title-discount {
-                            color: #8f8aa7;
-                        }
-                        .title-offer {
-                            font-size: 20px;
-                            font-weight: 700;
-                        }
+                        @include infoOfferEducation;
                         .total-discount{
                             background-color: #6492a0;
-                            border-radius: 10px;
-                            position: absolute;
-                            left: 0;
-                            top: 60%;
-                            padding: 5px;
-                            width: 70%;
-                            .text-discount{
-                                text-align: center;
-                                color: #ffffff;
-                            }
-                            .number-discount {
-                                color: #ffffff;
-                                font-size: 30px;
-                                text-align: center;
-                            }
+                            @include totalDiscountEducation;
                         }
                     }
 
                     .image-offer-education {
-                        padding: 20px 10px 0 10px;
-                        z-index: 4;
-                        img {
-                            width: 100%;
-                            object-fit: fill;
-                            height: 100%;
-                        }
+                        @include imageOfferEducation;
                     }
                 }
 
                 .offer-education-3 {
-                    background-color: #ffffff;
-                    position: relative;
+                    @include offerEducation;
                     .background-offer-education {
-                        height: 100%;
-                        width: 100%;
+                        @include backgroundOfferEducation;
                         background-color: #f5ede5;
-                        position: absolute;
-                        z-index: 2;
-                        clip-path: polygon(23% 62%, 76% 44%, 100% 59%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 54%);
                     }
                     .info-offer-education {
-                        padding: 20px 10px 20px 40px;
-                        z-index: 4;
-                        .title-discount {
-                            color: #8f8aa7;
-                        }
-                        .title-offer {
-                            font-size: 20px;
-                            font-weight: 700;
-                        }
+                        @include infoOfferEducation;
                         .total-discount{
                             background-color: #df4260;
-                            border-radius: 10px;
-                            position: absolute;
-                            left: 0;
-                            top: 60%;
-                            padding: 5px;
-                            width: 70%;
-                            .text-discount{
-                                text-align: center;
-                                color: #ffffff;
-                            }
-                            .number-discount {
-                                color: #ffffff;
-                                font-size: 30px;
-                                text-align: center;
-                            }
+                            @include totalDiscountEducation;
                         }
                     }
 
                     .image-offer-education {
-                        padding: 20px 10px 0 10px;
-                        z-index: 4;
-                        img {
-                            width: 100%;
-                            object-fit: fill;
-                            height: 100%;
-                        }
+                        @include imageOfferEducation;
                     }
                 }
 
             }
             #carousel-3 {
-                padding-bottom: 40px;
-                position: relative;
-                align-items: space;
+                @include carouselStyle;
             }
 
             .carousel-control-prev {
-                height: 30px;
-                position: absolute;
-                top: 100%;
-
-                .carousel-control-prev-icon {
-                    width: 40px;
-                    height: 40px;
-                    background-image: url("~/assets/images/icon_prev.png");
-                }
-
-                .carousel-control-prev-icon:hover {
-                    content: "<";
-                    font-size: 55px;
-                    color: orange;
-                }
+                @include carouselControlPrev;
+                top: 96%;
             }
 
             .carousel-control-next {
-                height: 30px;
-                position: absolute;
-                top: 100%;
-
-                .carousel-control-next-icon {
-                    width: 40px;
-                    height: 40px;
-                    background-image: url("~/assets/images/icon_next.png");
-                }
+                @include carouselControlNext;
+                top: 96%
             }
 
-            .carousel-indicators {
-                position: absolute;
-                top: 100%;
-
-                li {
-                    width: 100%;
-                    background-color: #ffa5000d;
-                }
-
-                .active {
-                    background-color: orange;
-                }
-            }
+            @include carouselIndicators;
         }
 
     }

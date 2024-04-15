@@ -4,196 +4,335 @@
             <WebHeader />
         </div>
         <div class="body">
-            <div class="slide-banner">
+            <div class="slide-banner mb-3">
                 <div class="d-flex mx-auto justify-content-between" style="padding: 0px 16px;">
                     <div class="">
-                        <h2>Welcome back, ready for your next lessson?</h2>
+                        <h2>Welcome back, ready for your next lessson? <font-awesome-icon icon="dollar-sign"  style="font-size: 30px"/>
+</h2>
                     </div>
                     <div class="">
                         <b-button variant="outline-primary" class="view-lesson">View lesson</b-button>
                     </div>
+                    
                 </div>
                 <div class="slide-lesson">
                     <div class="list-lessons">
-                        <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators
-                            background="#efeff7" img-width="1024" img-height="480"
-                            style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart"
-                            @sliding-end="onSlideEnd">
-                            <b-carousel-slide>
-                                <template #img>
-                                    <div class="d-flex lesson row">
-                                        <div class="col-lg-6" style="background-color: #efeff7;">
-                                            <div class="info-lesson mr-2 row">
-                                                <div class="image-lesson col-lg-4">
-                                                    <img class="d-block img-fluid" width="100%" height="150px"
-                                                        :src="require(`~/assets/images/${listLesson[0].image}.png`)"
-                                                        alt="image slot">
-                                                </div>
-                                                <div class="col-lg-8">
-                                                    <div class="time-lesson">
-                                                        <span>{{ listLesson[0].timeLesson }}</span>
+                        <div class="view-lesson-pc">
+                            <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators
+                                background="#efeff7" img-width="1024" img-height="480"
+                                style="" @sliding-start="onSlideStart"
+                                @sliding-end="onSlideEnd">
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-lg-6" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
                                                     </div>
-                                                    <div class="title-lesson">
-                                                        <h4>{{ listLesson[0].title }}</h4>
-                                                    </div>
-                                                    <div class="author-lesson">
-                                                        <div class="ava-author">
-                                                            <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
-                                                                class="" alt="" />
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
                                                         </div>
-                                                        <div class="name-author mx-2">
-                                                            <span>{{ listLesson[0].author }}</span>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 " style="background-color: #efeff7;">
+                                                <div class="info-lesson ml-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[1].image}.png`)"
+                                                            alt="image slot">
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[1].timeLesson }}</span>
+                                                        </div>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[1].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[1].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[1].author }}</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 " style="background-color: #efeff7;">
-                                            <div class="info-lesson ml-2 row">
-                                                <div class="image-lesson col-lg-4">
-                                                    <img class="d-block img-fluid" width="100%" height="150px"
-                                                        :src="require(`~/assets/images/${listLesson[1].image}.png`)"
-                                                        alt="image slot">
-                                                </div>
-                                                <div class="col-lg-8">
-                                                    <div class="time-lesson">
-                                                        <span>{{ listLesson[1].timeLesson }}</span>
+                                    </template>
+                                </b-carousel-slide>
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-lg-6" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
                                                     </div>
-                                                    <div class="title-lesson">
-                                                        <h4>{{ listLesson[1].title }}</h4>
-                                                    </div>
-                                                    <div class="author-lesson">
-                                                        <div class="ava-author">
-                                                            <img :src="require(`~/assets/images/${listLesson[1].avatarAuthour}.png`)"
-                                                                class="" alt="" />
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
                                                         </div>
-                                                        <div class="name-author mx-2">
-                                                            <span>{{ listLesson[1].author }}</span>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6" style="background-color: #efeff7;">
+                                                <div class="info-lesson ml-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[1].image}.png`)"
+                                                            alt="image slot">
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[1].timeLesson }}</span>
+                                                        </div>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[1].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[1].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[1].author }}</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </template>
-                            </b-carousel-slide>
-                            <b-carousel-slide>
-                                <template #img>
-                                    <div class="d-flex lesson row">
-                                        <div class="col-lg-6" style="background-color: #efeff7;">
-                                            <div class="info-lesson mr-2 row">
-                                                <div class="image-lesson col-lg-4">
-                                                    <img class="d-block img-fluid" width="100%" height="150px"
-                                                        :src="require(`~/assets/images/${listLesson[0].image}.png`)"
-                                                        alt="image slot">
-                                                </div>
-                                                <div class="col-lg-8">
-                                                    <div class="time-lesson">
-                                                        <span>{{ listLesson[0].timeLesson }}</span>
+                                    </template>
+                                </b-carousel-slide>
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-lg-6" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
                                                     </div>
-                                                    <div class="title-lesson">
-                                                        <h4>{{ listLesson[0].title }}</h4>
-                                                    </div>
-                                                    <div class="author-lesson">
-                                                        <div class="ava-author">
-                                                            <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
-                                                                class="" alt="" />
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
                                                         </div>
-                                                        <div class="name-author mx-2">
-                                                            <span>{{ listLesson[0].author }}</span>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6" style="background-color: #efeff7;">
+                                                <div class="info-lesson ml-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[1].image}.png`)"
+                                                            alt="image slot">
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[1].timeLesson }}</span>
+                                                        </div>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[1].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[1].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[1].author }}</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6" style="background-color: #efeff7;">
-                                            <div class="info-lesson ml-2 row">
-                                                <div class="image-lesson col-lg-4">
-                                                    <img class="d-block img-fluid" width="100%" height="150px"
-                                                        :src="require(`~/assets/images/${listLesson[1].image}.png`)"
-                                                        alt="image slot">
-                                                </div>
-                                                <div class="col-lg-8">
-                                                    <div class="time-lesson">
-                                                        <span>{{ listLesson[1].timeLesson }}</span>
+                                    </template>
+                                </b-carousel-slide>
+                            </b-carousel>
+                        </div>
+                        <div class="view-lesson-mobile">
+                            <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators
+                                background="#efeff7" img-width="1024" img-height="480"
+                                style="" @sliding-start="onSlideStart"
+                                @sliding-end="onSlideEnd">
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-12" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
                                                     </div>
-                                                    <div class="title-lesson">
-                                                        <h4>{{ listLesson[1].title }}</h4>
-                                                    </div>
-                                                    <div class="author-lesson">
-                                                        <div class="ava-author">
-                                                            <img :src="require(`~/assets/images/${listLesson[1].avatarAuthour}.png`)"
-                                                                class="" alt="" />
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
                                                         </div>
-                                                        <div class="name-author mx-2">
-                                                            <span>{{ listLesson[1].author }}</span>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </template>
-                            </b-carousel-slide>
-                            <b-carousel-slide>
-                                <template #img>
-                                    <div class="d-flex lesson row">
-                                        <div class="col-lg-6" style="background-color: #efeff7;">
-                                            <div class="info-lesson mr-2 row">
-                                                <div class="image-lesson col-lg-4">
-                                                    <img class="d-block img-fluid" width="100%" height="150px"
-                                                        :src="require(`~/assets/images/${listLesson[0].image}.png`)"
-                                                        alt="image slot">
-                                                </div>
-                                                <div class="col-lg-8">
-                                                    <div class="time-lesson">
-                                                        <span>{{ listLesson[0].timeLesson }}</span>
-                                                    </div>
-                                                    <div class="title-lesson">
-                                                        <h4>{{ listLesson[0].title }}</h4>
-                                                    </div>
-                                                    <div class="author-lesson">
-                                                        <div class="ava-author">
-                                                            <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
-                                                                class="" alt="" />
-                                                        </div>
-                                                        <div class="name-author mx-2">
-                                                            <span>{{ listLesson[0].author }}</span>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6" style="background-color: #efeff7;">
-                                            <div class="info-lesson ml-2 row">
-                                                <div class="image-lesson col-lg-4">
-                                                    <img class="d-block img-fluid" width="100%" height="150px"
-                                                        :src="require(`~/assets/images/${listLesson[1].image}.png`)"
-                                                        alt="image slot">
-                                                </div>
-                                                <div class="col-lg-8">
-                                                    <div class="time-lesson">
-                                                        <span>{{ listLesson[1].timeLesson }}</span>
+                                    </template>
+                                </b-carousel-slide>
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-12" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
                                                     </div>
-                                                    <div class="title-lesson">
-                                                        <h4>{{ listLesson[1].title }}</h4>
-                                                    </div>
-                                                    <div class="author-lesson">
-                                                        <div class="ava-author">
-                                                            <img :src="require(`~/assets/images/${listLesson[1].avatarAuthour}.png`)"
-                                                                class="" alt="" />
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
                                                         </div>
-                                                        <div class="name-author mx-2">
-                                                            <span>{{ listLesson[1].author }}</span>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </template>
-                            </b-carousel-slide>
-                        </b-carousel>
+                                    </template>
+                                </b-carousel-slide>
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-12" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
+                                                        </div>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </b-carousel-slide>
+                                <b-carousel-slide>
+                                    <template #img>
+                                        <div class="d-flex lesson row">
+                                            <div class="col-12" style="background-color: #efeff7;">
+                                                <div class="info-lesson mr-2 row">
+                                                    <div class="image-lesson col-lg-4">
+                                                        <img class="d-block img-fluid" width="100%" height="150px"
+                                                            :src="require(`~/assets/images/${listLesson[0].image}.png`)"
+                                                            alt="image slot">
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="time-lesson">
+                                                            <span>{{ listLesson[0].timeLesson }}</span>
+                                                        </div>
+                                                        <div class="title-lesson">
+                                                            <h4>{{ listLesson[0].title }}</h4>
+                                                        </div>
+                                                        <div class="author-lesson">
+                                                            <div class="ava-author">
+                                                                <img :src="require(`~/assets/images/${listLesson[0].avatarAuthour}.png`)"
+                                                                    class="" alt="" />
+                                                            </div>
+                                                            <div class="name-author mx-2">
+                                                                <span>{{ listLesson[0].author }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </b-carousel-slide>
+                            </b-carousel>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,16 +358,16 @@
                                 <div class="music-image p-3">
                                     <img :src="require(`~/assets/images/${item.image}.png`)" class="" alt="" />
                                 </div>
-                                <div class="rate-music row mx-0 py-2">
-                                    <div class="rating-music col-lg-4 col-sm-4 pr-0">
+                                <div class="rate-music row mx-0 p-2">
+                                    <div class="rating-music col-lg-4 col-sm-4 px-0">
                                         <b-icon icon="star" class="icon-rating"></b-icon>
                                         <span>{{ item.rating }}</span>
                                     </div>
-                                    <div class="view-music mx-0 col-lg-4 col-sm-4 pr-0">
+                                    <div class="view-music mx-0 col-lg-4 col-sm-4  px-0">
                                         <b-icon icon="eye" class="icon-rating"></b-icon>
                                         <span>{{ item.eye }}</span>
                                     </div>
-                                    <div class="listen-music mx-0 col-lg-4 col-sm-4 pr-0">
+                                    <div class="listen-music mx-0 col-lg-4 col-sm-4  px-0">
                                         <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                         <span>{{ item.listen }}</span>
                                     </div>
@@ -337,7 +476,7 @@
                                 <div class="background-image-four">
                                 </div>
                                 <div class="ava-creator">
-                                    <img src="@/assets/images/creator4.png">
+                                    <img src="@/assets/images/creator7.png">
                                 </div>
                             </div>
                             <div class="body-creator py-4">
@@ -439,9 +578,10 @@
                         <b-button variant="outline-danger" class="view-lesson">View all</b-button>
                     </div>
                 </div>
-                <div class="list-lessons">
-                    <b-carousel id="carousel-2" v-model="slide" :interval="4000" controls indicators
-                        background="#efeff7" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;"
+                <div class="list-lessons mb-4">
+                    <div class="list-lesson-view-pc">
+                        <b-carousel id="carousel-2" v-model="slide" :interval="4000" controls indicators
+                        background="#efeff7" img-width="1024" img-height="480"
                         @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
                         <b-carousel-slide>
                             <template #img>
@@ -450,17 +590,18 @@
                                         <div class="header-info">
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_kpop.png" class="" alt="" />
+                                                <!-- <img class="d-block img-fluid" :src="require(`~/assets/images/${listLesson[0].image}.png`)"> -->
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -491,16 +632,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_jazz.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -531,16 +672,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_rap.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -577,16 +718,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_kpop.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -617,16 +758,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_jazz.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -657,16 +798,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_rap.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -703,16 +844,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_kpop.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -743,16 +884,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_jazz.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -783,16 +924,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_rap.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -829,16 +970,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_kpop.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -869,16 +1010,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_jazz.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -909,16 +1050,16 @@
                                             <div class="music-image p-3">
                                                 <img src="~/assets/images/nhac_rap.png" class="" alt="" />
                                             </div>
-                                            <div class="rate-music row mx-0 py-2">
-                                                <div class="rating-music col-lg-4 pr-0">
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
                                                     <b-icon icon="star" class="icon-rating"></b-icon>
                                                     <span>4.5(120)</span>
                                                 </div>
-                                                <div class="view-music mx-0 col-lg-4 pr-0">
+                                                <div class="view-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="eye" class="icon-rating"></b-icon>
                                                     <span>28.500</span>
                                                 </div>
-                                                <div class="listen-music mx-0 col-lg-4 pr-0">
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
                                                     <b-icon icon="play-circle" class="icon-rating"></b-icon>
                                                     <span>36 Lesion</span>
                                                 </div>
@@ -948,6 +1089,198 @@
                             </template>
                         </b-carousel-slide>
                     </b-carousel>
+                    </div>
+                    <div class="list-lesson-view-mobile">
+                        <b-carousel id="carousel-2" v-model="slide" :interval="4000" controls indicators
+                        background="#efeff7" img-width="1024" img-height="480"
+                        @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="lesson row">
+                                    <div class="info-music col-lg-12">
+                                        <div class="header-info">
+                                            <div class="music-image p-3">
+                                                <img src="~/assets/images/nhac_kpop.png" class="" alt="" />
+                                                <!-- <img class="d-block img-fluid" :src="require(`~/assets/images/${listLesson[0].image}.png`)"> -->
+                                            </div>
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
+                                                    <b-icon icon="star" class="icon-rating"></b-icon>
+                                                    <span>4.5(120)</span>
+                                                </div>
+                                                <div class="view-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="eye" class="icon-rating"></b-icon>
+                                                    <span>28.500</span>
+                                                </div>
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="play-circle" class="icon-rating"></b-icon>
+                                                    <span>36 Lesion</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="author-music">
+                                            <div class="title-music">
+                                                <h4>Everything You Need to Know About Business </h4>
+                                            </div>
+                                            <div class="info-author row">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
+                                                    <img src="~/assets/images/nhac2.png" class="" alt="" />
+                                                </div>
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
+                                                    <span>Nicole Brown</span>
+                                                </div>
+                                                <div class="price-music col-lg-3 col-sm3">
+                                                    <span>$99.99</span>
+                                                </div>
+                                                <div class="promo-price col-lg-3 col-sm-3">
+                                                    <span>$49.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="lesson row">
+                                    <div class="info-music col-lg-12">
+                                        <div class="header-info">
+                                            <div class="music-image p-3">
+                                                <img src="~/assets/images/nhac_jazz.png" class="" alt="" />
+                                            </div>
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
+                                                    <b-icon icon="star" class="icon-rating"></b-icon>
+                                                    <span>4.5(120)</span>
+                                                </div>
+                                                <div class="view-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="eye" class="icon-rating"></b-icon>
+                                                    <span>28.500</span>
+                                                </div>
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="play-circle" class="icon-rating"></b-icon>
+                                                    <span>36 Lesion</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="author-music">
+                                            <div class="title-music">
+                                                <h4>Everything You Need to Know About Business </h4>
+                                            </div>
+                                            <div class="info-author row">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
+                                                    <img src="~/assets/images/nhac2.png" class="" alt="" />
+                                                </div>
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
+                                                    <span>Nicole Brown</span>
+                                                </div>
+                                                <div class="price-music col-lg-3 col-sm-3">
+                                                    <span>$99.99</span>
+                                                </div>
+                                                <div class="promo-price col-lg-3 col-sm-3">
+                                                    <span>$49.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="lesson row">
+                                    <div class="info-music col-lg-12">
+                                        <div class="header-info">
+                                            <div class="music-image p-3">
+                                                <img src="~/assets/images/nhac_rap.png" class="" alt="" />
+                                            </div>
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
+                                                    <b-icon icon="star" class="icon-rating"></b-icon>
+                                                    <span>4.5(120)</span>
+                                                </div>
+                                                <div class="view-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="eye" class="icon-rating"></b-icon>
+                                                    <span>28.500</span>
+                                                </div>
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="play-circle" class="icon-rating"></b-icon>
+                                                    <span>36 Lesion</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="author-music">
+                                            <div class="title-music">
+                                                <h4>Everything You Need to Know About Business </h4>
+                                            </div>
+                                            <div class="info-author row">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
+                                                    <img src="~/assets/images/nhac2.png" class="" alt="" />
+                                                </div>
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
+                                                    <span>Nicole Brown</span>
+                                                </div>
+                                                <div class="price-music col-lg-3 col-sm-3">
+                                                    <span>$99.99</span>
+                                                </div>
+                                                <div class="promo-price col-lg-3 col-sm-3">
+                                                    <span>$49.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                        <b-carousel-slide>
+                            <template #img>
+                                <div class="lesson row">
+                                    <div class="info-music col-lg-12">
+                                        <div class="header-info">
+                                            <div class="music-image p-3">
+                                                <img src="~/assets/images/nhac_kpop.png" class="" alt="" />
+                                            </div>
+                                            <div class="rate-music row mx-0 p-2">
+                                                <div class="rating-music col-lg-4 px-0">
+                                                    <b-icon icon="star" class="icon-rating"></b-icon>
+                                                    <span>4.5(120)</span>
+                                                </div>
+                                                <div class="view-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="eye" class="icon-rating"></b-icon>
+                                                    <span>28.500</span>
+                                                </div>
+                                                <div class="listen-music mx-0 col-lg-4 px-0">
+                                                    <b-icon icon="play-circle" class="icon-rating"></b-icon>
+                                                    <span>36 Lesion</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="author-music">
+                                            <div class="title-music">
+                                                <h4>Everything You Need to Know About Business </h4>
+                                            </div>
+                                            <div class="info-author row">
+                                                <div class="image-author col-lg-2 col-sm-2 pr-0">
+                                                    <img src="~/assets/images/nhac2.png" class="" alt="" />
+                                                </div>
+                                                <div class="name-author col-lg-4 col-sm-4 px-0">
+                                                    <span>Nicole Brown</span>
+                                                </div>
+                                                <div class="price-music col-lg-3 col-sm-3">
+                                                    <span>$99.99</span>
+                                                </div>
+                                                <div class="promo-price col-lg-3 col-sm-3">
+                                                    <span>$49.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </b-carousel-slide>
+                    </b-carousel>
+                    </div>
                 </div>
             </div>
             <div class="favorite-course">
@@ -1054,7 +1387,7 @@
                 </div>
                 <div class="list-offer-educations mt-5">
                     <b-carousel id="carousel-3" v-model="slide" :interval="4000" controls indicators
-                        background="#efeff7" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px black;"
+                        background="#efeff7" img-width="1024" img-height="480"
                         @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
                         <b-carousel-slide>
                             <template #img>
@@ -1554,6 +1887,198 @@ export default {
                     type: 'kpop'
                 }
             ],
+            listDataExample: [
+                {
+                    data1: {
+                        image: 'nhac_rap',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'rap'
+                    },
+                    data2: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    },
+                    data3: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    }
+                },
+                {
+                    data1: {
+                        image: 'nhac_rap',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'rap'
+                    },
+                    data2: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    },
+                    data3: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    }
+                },
+                {
+                    data1: {
+                        image: 'nhac_rap',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'rap'
+                    },
+                    data2: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    },
+                    data3: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    }
+                },
+                {
+                    data1: {
+                        image: 'nhac_rap',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'rap'
+                    },
+                    data2: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    },
+                    data3: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    }
+                },
+                {
+                    data1: {
+                        image: 'nhac_rap',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'rap'
+                    },
+                    data2: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    },
+                    data3: {
+                        image: 'nhac_pop',
+                        title: 'Mer Duplicater in Sketch- Inconsistent Symbols & Styles',
+                        avatarAuthour: 'nhac2',
+                        author: 'Nice Brown',
+                        rating: '4.5(120)',
+                        eye: '28,500',
+                        listen: '36 Lesion',
+                        price: '$99.99',
+                        promotionalPrice: '49.65',
+                        type: 'kpop'
+                    }
+                }
+            ],
             listMusic: [],
         }
     },
@@ -1586,5 +2111,5 @@ export default {
 
 </script>
 <style>
-@import '~/assets/scss/home/home.scss';
+@import '~/assets/css/home/home.css';
 </style>

@@ -29,7 +29,45 @@
                 
             }
         }
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
 
+    }
+
+    .menu-web-mobile {
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: 1024px) {
+            display: flex;
+        }
+        .logo-web {
+            img {
+                height: 100px;
+            }
+        }
+
+        .button-menu {
+            .menu-web {
+                .item-menu {
+                    font-size: 2rem;
+                    padding: 5px;
+                    border-top: 0.5px solid black;
+                }
+                .muti-language {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 50px;
+                    }
+                    a {
+                        color: black !important;
+                    }
+                }
+            }
+        }
     }
     
 }

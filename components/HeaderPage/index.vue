@@ -63,6 +63,49 @@
         </div>
       </b-navbar>
     </div>
+    <div class="menu-web-mobile px-3">
+      <div class="logo-web">
+        <b-img src="@/assets/images/image_logo_Dsoft.png" width="" alt="big-logo" class="" />
+      </div>
+      <div class="button-menu">
+        <b-icon icon="list" font-scale="2" v-b-toggle.sidebar-right></b-icon>
+        <div class="menu-web">
+          <b-sidebar id="sidebar-right" right shadow>
+            <div class="px-3 py-2">
+              <div class="item-menu">
+                <span>Home</span>
+              </div>
+              <div class="item-menu">
+                <span>Page</span>
+              </div>
+              <div class="item-menu">
+                <span>Couse</span>
+              </div>
+              <div class="item-menu">
+                <span>Feature</span>
+              </div>
+              <div class="item-menu">
+                <span>Blog</span>
+              </div>
+              <div class="item-menu">
+                <span>Shop</span>
+              </div>
+              <div class="item-menu muti-language">
+                <b-img src="@/assets/images/ava-account.png" alt="big-logo" class="avatar-user" />
+                <b-navbar-nav class="mx-auto color-black">
+                  <b-nav-item-dropdown text="Home" right>
+                    <b-dropdown-item href="#">EN</b-dropdown-item>
+                    <b-dropdown-item href="#">ES</b-dropdown-item>
+                    <b-dropdown-item href="#">RU</b-dropdown-item>
+                    <b-dropdown-item href="#">FA</b-dropdown-item>
+                  </b-nav-item-dropdown>
+                </b-navbar-nav>
+              </div>
+            </div>
+          </b-sidebar>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
